@@ -1,3 +1,6 @@
+# About
+A fully functional Javascript library to minify and unminify CSS.
+
 # Installation
 `css-formatter.js` includes both `CSSFormatter.minify()` and `CSSFormatter.unminify()` functions.
 
@@ -17,7 +20,7 @@ var minified = CSSFormatter.minify(myString);
 var unminified = CSSFormatter.unminify(myString);
 ```
 
-# About
-This script is created for [CSS Creator & Minifer](https://developer.hyvor.com/tools/css-creator/) project at [Hyvor Developer](https://developer.hyvor.com)
+# And...
+This script is created for [CSS Creator & Minifer](https://developer.hyvor.com/tools/css-creator/) project at [Hyvor Developer](https://developer.hyvor.com).
 
-[Donations Link](https://www.patreon.com/hyvordeveloper)
+If you like to help us here's our patreon link: [Patreon](https://www.patreon.com/hyvordeveloper)
