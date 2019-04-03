@@ -8,7 +8,7 @@
 * Unminifier is inspired by <https://github.com/mrcoles/cssunminifier/blob/master/lib/cssunminifier.js>
 *
 */
-var minifyUnminify = (function() {
+var CSSFormatter = (function() {
 
 
 	// ================ Helper
@@ -354,6 +354,3 @@ var minifyUnminify = (function() {
 	};
 
 })();
-
-var minify = minifyUnminify.minify;
-var unminify = minifyUnminify.unminify;
