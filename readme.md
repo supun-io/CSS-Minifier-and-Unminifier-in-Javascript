@@ -20,6 +20,9 @@ var minified = CSSFormatter.minify(myString);
 var unminified = CSSFormatter.unminify(myString);
 ```
 
+# Usage
+We use this library in our [CSS Minifier](https://developer.hyvor.com/tools/css-minifier/). If you use it in any place, let me know. I'll add the link here.
+
 # And...
 This script is created for [CSS Creator & Minifer](https://developer.hyvor.com/tools/css-creator/) project at [Hyvor Developer](https://developer.hyvor.com).
 
