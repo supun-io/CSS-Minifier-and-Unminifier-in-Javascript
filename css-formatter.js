@@ -1,4 +1,4 @@
-/**
+/*
 * CSS Minifier in Javascript
 * 
 * @author SupunKavinda <https://twitter.com/SupunWimalasena>
@@ -6,7 +6,6 @@
 *
 * Minifier is inspired by PHP Library at <https://github.com/matthiasmullie/minify>
 * Unminifier is inspired by <https://github.com/mrcoles/cssunminifier/blob/master/lib/cssunminifier.js>
-*
 */
 var CSSFormatter = (function() {
 
@@ -87,7 +86,7 @@ var CSSFormatter = (function() {
 		});
 
 		// Comments
-		registerEncodePattern(/\/\*.*?\*\//s, '');
+		registerEncodePattern(/\/\*(.|[\r\n])*?\*\//, '');
 
 		// Calcs (One of the trickiest)
 		registerEncodePattern(/calc(\(.+?)(?=$|;|calc\()/, function(match, inside) {
@@ -232,11 +231,11 @@ var CSSFormatter = (function() {
 	function shortenColors(string) {
 
 		// #ffeedd to #fed
-		string = string.replace(/(?<=[: ])#([0-9a-z])\1([0-9a-z])\2([0-9a-z])\3(?:([0-9a-z])\4)?(?=[; }])/ig, '#$1$2$3$4');
+		string = string.replace(/([: ])#([0-9a-z])\1([0-9a-z])\2([0-9a-z])\3(?:([0-9a-z])\4)?(?=[; }])/ig, '#$1$2$3$4');
 
 		// unwanted alpha
-		string = string.replace(/(?<=[: ])#([0-9a-z]{6})ff?(?=[; }])/ig, '#$1'); 	// for 6 digit
-		string = string.replace(/(?<=[: ])#([0-9a-z]{3})f?(?=[; }])/ig, '#$1');		// for 3 digit
+		string = string.replace(/([: ])#([0-9a-z]{6})ff?(?=[; }])/ig, '#$1$2'); 	// for 6 digit
+		string = string.replace(/([: ])#([0-9a-z]{3})f?(?=[; }])/ig, '#$1$2');		// for 3 digit
 
 		return string;
 	}
