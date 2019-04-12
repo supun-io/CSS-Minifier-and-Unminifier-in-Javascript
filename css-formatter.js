@@ -231,11 +231,11 @@ var CSSFormatter = (function() {
 	function shortenColors(string) {
 
 		// #ffeedd to #fed
-		string = string.replace(/([: ])#([0-9a-z])\1([0-9a-z])\2([0-9a-z])\3(?:([0-9a-z])\4)?(?=[; }])/ig, '#$1$2$3$4');
+		string = string.replace(/([: ])#([0-9a-z])\2([0-9a-z])\3([0-9a-z])\4(?:([0-9a-z])\5)?(?=[; }])/ig, '$1#$2$3$4$5');
 
 		// unwanted alpha
-		string = string.replace(/([: ])#([0-9a-z]{6})ff?(?=[; }])/ig, '#$1$2'); 	// for 6 digit
-		string = string.replace(/([: ])#([0-9a-z]{3})f?(?=[; }])/ig, '#$1$2');		// for 3 digit
+		string = string.replace(/([: ])#([0-9a-z]{6})ff?(?=[; }])/ig, '$1#$2'); 	// for 6 digit
+		string = string.replace(/([: ])#([0-9a-z]{3})f?(?=[; }])/ig, '$1#$2');		// for 3 digit
 
 		return string;
 	}
